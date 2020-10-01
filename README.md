@@ -37,7 +37,7 @@ sudo vim /etc/systemd/system/airflow-webserver.service
   After=network.target mysql.service  
   Wants=mysql.service  
   [Service]
-  Environment= /home/spark/airflow   
+  Environment= /home/user/airflow   
   User=user  
   Group=user   
   Type=simple  
