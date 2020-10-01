@@ -1,29 +1,29 @@
 # In Unbuntu airflow installation(MySQL)
 
-1. enviroment
-vim \~/.bashrc  
-mkdir -p \~/airflow  
+# enviroment  
+vim \~/.bashrc    
+mkdir -p \~/airflow   
 export AIRFLOW_HOME=\~/airflow  
 export SLUGIFY_USES_TEXT_UNIDECODE=yes  
 source ~/.bashrc  
 
-2. virtualenv(Anaconda is installed and )
+# virtualenv(Anaconda is installed and )
 conda create --name airflow-env python='3.7'  
 conda activate airflow-env  
 pip install apache-airflow  
 pip install "airflow[mysql, crypto]"  
 
-3. MySQL
-mysql>CREATE DATABASE airflow CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-mysql>create user 'airflow'@'localhost' identified by ‘airflow’;
-mysql>grant all privileges on airflow.* to 'airflow'@'localhost';
-mysql>flush privileges;
-mysql>quit
+# MySQL
+mysql>CREATE DATABASE airflow CHARACTER SET utf8 COLLATE utf8_unicode_ci;  
+mysql>create user 'airflow'@'localhost' identified by ‘airflow’;  
+mysql>grant all privileges on airflow.* to 'airflow'@'localhost';  
+mysql>flush privileges;  
+mysql>quit  
 
-4. *Update the airflow.cfg file (should be available in ~/airflow/ directory.
+#Update the airflow.cfg file (should be available in ~/airflow/ directory)  
 sql_alchemy_conn = mysql://airflow:airflow@localhost/airflow
 
-5. systemd
+# systemd
 sudo vim /etc/systemd/system/airflow-webserver.service
 
  \# Unless required by applicable law or agreed to in writing,  
@@ -48,7 +48,7 @@ sudo vim /etc/systemd/system/airflow-webserver.service
   [Install]
   WantedBy=multi-user.target  
 
-6. start service by following command
+# start service by following command
 sudo systemctl daemon-reload  
 sudo service airflow-webserver start  
 sudo service airflow-webserver status  
