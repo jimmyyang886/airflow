@@ -24,7 +24,7 @@ mysql>quit
 sql_alchemy_conn = mysql://airflow:airflow@localhost/airflow  
 
 \#initialize database and start webserver  
-airflow initdb
+airflow initdb  
 airflow webserver  
 
 \#open web browser (ip:8080)
