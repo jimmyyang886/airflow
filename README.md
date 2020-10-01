@@ -13,7 +13,7 @@ conda activate airflow-env
 pip install apache-airflow  
 pip install "airflow[mysql, crypto]"  
 
-# MySQL
+# Airflow initialization by MySQL
 mysql>CREATE DATABASE airflow CHARACTER SET utf8 COLLATE utf8_unicode_ci;  
 mysql>create user 'airflow'@'localhost' identified by ‘airflow’;  
 mysql>grant all privileges on airflow.* to 'airflow'@'localhost';  
@@ -21,7 +21,10 @@ mysql>flush privileges;
 mysql>quit  
 
 #Update the airflow.cfg file (should be available in ~/airflow/ directory)  
-sql_alchemy_conn = mysql://airflow:airflow@localhost/airflow
+sql_alchemy_conn = mysql://airflow:airflow@localhost/airflow  
+
+\#initialize database
+airflow initdb
 
 # systemd
 sudo vim /etc/systemd/system/airflow-webserver.service
