@@ -23,7 +23,7 @@ mysql>quit
 #Update the airflow.cfg file (should be available in ~/airflow/ directory)  
 sql_alchemy_conn = mysql://airflow:airflow@localhost/airflow  
 
-\#initialize database
+\#initialize database  
 airflow initdb
 
 # systemd
