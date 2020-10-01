@@ -23,10 +23,13 @@ mysql>quit
 #Update the airflow.cfg file (should be available in ~/airflow/ directory)  
 sql_alchemy_conn = mysql://airflow:airflow@localhost/airflow  
 
-\#initialize database  
+\#initialize database and start webserver  
 airflow initdb
+airflow webserver  
 
-# systemd
+\#open web browser (ip:8080)
+
+# systemd(optional)
 sudo vim /etc/systemd/system/airflow-webserver.service
 
  \# Unless required by applicable law or agreed to in writing,  
