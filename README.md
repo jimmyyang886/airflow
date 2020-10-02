@@ -42,7 +42,7 @@ sudo vim /etc/systemd/system/airflow-webserver.service
   Description=Airflow webserver daemon  
   After=network.target mysql.service  
   Wants=mysql.service  
-  [Service]
+  [Service]  
   Environment= /home/user/airflow   
   User=user  
   Group=user   
@@ -58,16 +58,3 @@ sudo vim /etc/systemd/system/airflow-webserver.service
 sudo systemctl daemon-reload  
 sudo service airflow-webserver start  
 sudo service airflow-webserver status  
-
-
-
-
-
-
-
-
-
-
-
-
-
