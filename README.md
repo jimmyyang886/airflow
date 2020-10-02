@@ -1,4 +1,4 @@
-# In Unbuntu airflow installation(MySQL)
+# In Ubuntu airflow installation(MySQL)
 
 # enviroment  
 mkdir -p \~/airflow  
