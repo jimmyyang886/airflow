@@ -47,7 +47,7 @@ sudo vim /etc/systemd/system/airflow-webserver.service
   User=user  
   Group=user   
   Type=simple  
-  ExecStart= /bin/bash -c 'conda activate airflow-env && airflow webserver'  
+  ExecStart=/bin/bash -c 'source /home/spark/anaconda3/bin/activate airflow-env && airflow webserver'    
   Restart=on-failure  
   RestartSec=5s  
   PrivateTmp=true  
