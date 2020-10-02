@@ -1,8 +1,8 @@
 # In Unbuntu airflow installation(MySQL)
 
 # enviroment  
+mkdir -p \~/airflow  
 vim \~/.bashrc    
-mkdir -p \~/airflow   
 export AIRFLOW_HOME=\~/airflow  
 export SLUGIFY_USES_TEXT_UNIDECODE=yes  
 source ~/.bashrc  
