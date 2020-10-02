@@ -7,7 +7,7 @@ export AIRFLOW_HOME=\~/airflow
 export SLUGIFY_USES_TEXT_UNIDECODE=yes  
 source ~/.bashrc  
 
-# virtualenv(Anaconda is installed) and pip install
+# virtualenv(Anaconda is installed by Anaconda3-2020.02-Linux-x86_64.sh) and pip install
 conda create --name airflow-env python='3.7'  
 conda activate airflow-env  
 pip install apache-airflow  
